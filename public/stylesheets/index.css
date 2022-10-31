@@ -1,0 +1,128 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  padding: 2vh 2vh;
+}
+
+.title {
+  width: 100%;
+  height: 4vmax;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title i {
+  font-size: 2vmax;
+}
+.centre {
+  width: 100%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.664);
+  display: flex;
+  justify-content: space-between;
+
+}
+.s-box {
+  width: 31vmax;
+  height: 20vmax;
+  /* background-color: palegreen; */
+  margin-top: 6vmax;
+}
+.s-box img {
+  width: 30vmax;
+}
+
+/* weather card */
+.cards {
+  width: 50vmax;
+  height: 40vmax;
+  background-color: lightcoral;
+  gap: 2vmax;
+  margin-top: 6vmax;
+
+}
+.temp{
+    width: 50vmax;
+    height: 6vmax;
+    background-color: grey;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info-cards{
+    display: flex;
+    gap: 2vmax;
+}
+.dTime{
+    display: flex;
+    align-items: center;
+    width: 10vmax;
+    height: 100%;
+    justify-content: space-around;
+
+}
+#temp{
+    margin-right: 4vmax;
+}
+.card {
+  width: 14vmax;
+  height: 14vmax;
+  background-color: skyblue;
+  margin-top: 10vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  opacity: 0.8;
+  /* position: relative; */
+  /* left: 70%; */
+  /* filter: blur(1px); */
+}
+.card img {
+  width: 6vmax;
+  padding: 1vmax 0;
+}
+.card h3 {
+  margin-top:0.5vmax;
+  font-size: 2vmax;
+}
+.card h2 {
+    font-size: 2vmax;
+    margin-top: 0.3vmax;
+  }
+.cards p {
+    margin-top: 3vmax;
+    width: 47vmax;
+}
+.both_temp{
+  width: 13vmax;
+  height: 100%;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  gap: 1vmax;
+}
+.max_temp{
+  width: 100%;
+  height: 2.5vmax;
+  background-color: red;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+.max_temp>img{
+  width: 3vmax;
+}
+

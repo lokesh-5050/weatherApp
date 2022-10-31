@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../stylesheets/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+      <div class="title">
+        <h2>Weather It</h2>
+        <i class="ri-contacts-fill"></i>
+      </div>
+
+      <div class="centre">
+
+        <div class="s-box">
+          
+          <form id="weatherForm">
+            <input type="text" id="input" style="width: 25vmax;height: 2.5vmax;border-radius: 2px;outline: none;border: none;background-color: rgba(62, 180, 226, 0.603);" placeholder="Search City" >
+            <input type="submit" value="Search"  style="width: 5vmax;height: 2.5vmax;">
+          </form>
+          <img src="../images/weather-forecast-news-by-news-anchor-removebg-preview.png" alt="">
+        </div>
+  
+        <!-- weather card -->
+        <div class="cards">
+          <div class="temp">
+            <h2>Selected City</h2>
+            <div class="dTime">
+              <h4>Date</h4>
+              <h5>Time</h5>
+            </div>
+            <div class="both_temp">
+              <div class="max_temp">
+                <img src="../images/temperature.png" alt="">
+                <h3>Max : <span id="max">35</span></h3>
+                
+              </div>
+              <div class="max_temp">
+                <img src="../images/temperature.png" alt="">
+                <h3>Min : <span id="min">25</span></h3>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-cards">
+
+            <div class="card">
+              <img src="../images/humidity.png" alt="">
+              <h2>h</h2>
+              <h3>Humidity</h3>
+            </div>
+            <div class="card">
+              <img src="../images/pressure.png" alt="">
+              <h2>h</h2>
+
+              <h3>Pressure</h3>
+            </div>
+            <div class="card">
+              <img src="../images/wind.png" alt="">
+              <h2>h</h2>
+
+              <h3>Wind</h3>
+            </div>
+          </div>
+          <p>Aboyt the weaher Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur corrupti voluptate ea omnis non adipisci error! Quae quia minus sint.</p>
+          
+        </div>
+      </div>
+      <!-- seach form -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../javascripts/index.js"></script>
+</body>
+</html>

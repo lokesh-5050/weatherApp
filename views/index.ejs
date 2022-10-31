@@ -20,7 +20,10 @@
         <div class="s-box">
           
           <form id="weatherForm">
-            <input type="text" id="input" style="width: 25vmax;height: 2.5vmax;border-radius: 2px;outline: none;border: none;background-color: rgba(62, 180, 226, 0.603);" placeholder="Search City" >
+            <input type="text" id="input" autocomplete="off" style="width: 25vmax;height: 2.5vmax;border-radius: 2px;outline: none;border: none;background-color: rgba(62, 180, 226, 0.603);" placeholder="Search City" >
+            <div style="position: absolute;background-color: red;width: 25vmax;max-height: 12vmax;margin-top: 0.2vmax;overflow-y: auto;" class="suggestions_div">
+              
+            </div>
             <input type="submit" value="Search"  style="width: 5vmax;height: 2.5vmax;">
           </form>
           <img src="../images/weather-forecast-news-by-news-anchor-removebg-preview.png" alt="">

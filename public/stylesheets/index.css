@@ -52,6 +52,10 @@ body {
   gap: 2vmax;
   margin-top: 6vmax;
 }
+#search_icon {
+  width: 2.6vmax;
+  margin-left: 1.5vmax;
+}
 .temp {
   width: 50vmax;
   height: 6vmax;
@@ -98,6 +102,14 @@ body {
   /* left: 70%; */
   /* filter: blur(1px); */
 }
+.suggestions_div {
+  position: absolute;
+  width: 37vmax;
+  max-height: 12vmax;
+  top: 15vmax;
+  overflow-y: auto;
+  padding: 0.5vmax 0vmax;
+}
 .card img {
   width: 6vmax;
   padding: 1vmax 0;
@@ -134,7 +146,7 @@ body {
 }
 
 .bar {
-  width: 33vmax;
+  width: 34vmax;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,15 +186,20 @@ body {
     display: none;
   }
   #news_anchor {
-    margin-left: 4vmax;
+    margin-left: 3.5vmax;
   }
   #search_icon {
     margin-left: 2vmax;
   }
-  .bar{
+  .bar {
     width: auto;
   }
   #input {
     width: 60vmax !important;
+  }
+  .suggestions_div{
+    position: absolute;
+    top: 4vmax;
+    padding: 0.7vmax 0.5vmax;
   }
 }

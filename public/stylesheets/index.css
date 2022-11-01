@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,200&display=swap");
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  
+  font-family: "Montserrat", sans-serif;
 }
 html,
 body {
@@ -34,7 +33,6 @@ body {
   background-color: rgba(255, 255, 255, 0.664);
   display: flex;
   justify-content: space-between;
-
 }
 .s-box {
   width: 31vmax;
@@ -53,31 +51,38 @@ body {
   /* background-color: lightcoral; */
   gap: 2vmax;
   margin-top: 6vmax;
-
 }
-.temp{
-    width: 50vmax;
-    height: 6vmax;
-    /* background-color: grey; */
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.temp {
+  width: 50vmax;
+  height: 6vmax;
+  /* background-color: grey; */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.info-cards{
-    display: flex;
-    gap: 2vmax;
+.info-cards {
+  display: flex;
+  gap: 2vmax;
 }
-.dTime{
-    display: flex;
-    align-items: center;
-    width: 10vmax;
-    height: 100%;
-    justify-content: space-around;
-
+.dTime {
+  display: flex;
+  align-items: center;
+  width: 10vmax;
+  height: 100%;
+  justify-content: space-around;
 }
-#temp{
-    margin-right: 4vmax;
+#input {
+  width: 53vw;
+  height: 2.5vmax;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  background-color: #84e7fd;
+  padding: 2vh 2vh;
+}
+#temp {
+  margin-right: 4vmax;
 }
 .card {
   width: 14vmax;
@@ -98,18 +103,18 @@ body {
   padding: 1vmax 0;
 }
 .card h3 {
-  margin-top:0.5vmax;
+  margin-top: 0.5vmax;
   font-size: 2vmax;
 }
 .card h2 {
-    font-size: 2vmax;
-    margin-top: 0.3vmax;
-  }
-.cards p {
-    margin-top: 3vmax;
-    width: 47vmax;
+  font-size: 2vmax;
+  margin-top: 0.3vmax;
 }
-.both_temp{
+.cards p {
+  margin-top: 3vmax;
+  width: 47vmax;
+}
+.both_temp {
   width: 13vmax;
   height: 100%;
   /* background-color: skyblue; */
@@ -117,14 +122,67 @@ body {
   flex-direction: column;
   gap: 1vmax;
 }
-.max_temp{
+.max_temp {
   width: 100%;
   height: 2.5vmax;
   display: flex;
   white-space: nowrap;
   align-items: center;
 }
-.max_temp>img{
+.max_temp > img {
   width: 3vmax;
 }
 
+.bar {
+  width: 33vmax;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .centre {
+    display: flex;
+    flex-direction: column;
+    gap: 5vmax;
+  }
+  .s-box {
+    width: 40vmax;
+    position: relative;
+    left: 50%;
+    top: 14vmax;
+    transform: translate(-50%, -50%);
+  }
+  .temp {
+    margin-top: 2vmax;
+    display: flex;
+    justify-content: space-around;
+  }
+  .info-cards {
+    margin-top: 3vmax;
+    margin-left: 4vmax;
+  }
+  #Phrase {
+    margin-left: 3vmax;
+    align-items: center;
+    text-align: center;
+  }
+  #Date_now {
+    display: none;
+  }
+  #Time_now {
+    display: none;
+  }
+  #news_anchor {
+    margin-left: 4vmax;
+  }
+  #search_icon {
+    margin-left: 2vmax;
+  }
+  .bar{
+    width: auto;
+  }
+  #input {
+    width: 60vmax !important;
+  }
+}

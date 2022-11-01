@@ -6157,7 +6157,7 @@ var input_Bar = document.getElementById("input")
 input_Bar.addEventListener("keydown" , (e)=>{
     setTimeout(async() => {
         console.log(e.target.value);
-        if(e.target.value.length > 0){
+        if(e.target.value.length > 2){
             const suggestions = await search.filter((data) =>{
                 return data.name.toLowerCase().includes(e.target.value.toLowerCase())
             })
@@ -6178,5 +6178,13 @@ input_Bar.addEventListener("keydown" , (e)=>{
             let suggestions_div = document.querySelector(".suggestions_div")
             suggestions_div.innerHTML = ""
         }
-    }, 2000);
+    }, 1);
 })
+
+function searchWeatherIcon() {
+    let search_icon = document.getElementById("search_icon")
+    let submit = document.getElementById("submit")
+    search_icon.addEventListener("click" , (e) =>{
+        submit.click()
+    })
+}

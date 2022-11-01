@@ -20,13 +20,17 @@
         <div class="s-box">
           
           <form id="weatherForm">
-            <input type="text" id="input" autocomplete="off" style="width: 25vmax;height: 2.5vmax;border-radius: 2px;outline: none;border: none;background-color: rgba(62, 180, 226, 0.603);" placeholder="Search City" >
-            <div style="position: absolute;background-color: red;width: 25vmax;max-height: 12vmax;margin-top: 0.2vmax;overflow-y: auto;" class="suggestions_div">
-              
+            <div class="bar">
+
+              <input type="text" id="input" class="inp" autocomplete="off" style="" placeholder="Search City" >
+              <div style="position: absolute;background-color: red;width: 25vh;max-height: 12vmax;margin-top: 3vmax;overflow-y: auto;" class="suggestions_div">
+                
+              </div>
+              <img src="../images/search.png" style="width: 2.6vmax;" id="search_icon" alt="">
+              <input type="submit" value="Search"  id="submit" style="width: 5vmax;height: 2.5vmax;display: none;">
             </div>
-            <input type="submit" value="Search"  style="width: 5vmax;height: 2.5vmax;">
           </form>
-          <img src="../images/weather-forecast-news-by-news-anchor-removebg-preview.png" alt="">
+          <img src="../images/weather-forecast-news-by-news-anchor-removebg-preview.png" id="news_anchor" alt="">
         </div>
   
         <!-- weather card -->
@@ -35,11 +39,11 @@
             <h2 id="City_name">Selected City</h2>
             <div class="dTime">
               <h4 id="Date_now">Date</h4>
-              <h5 id="Time_now">Time</h5>
+              <h4 id="Time_now">Time</h4>
             </div>
             <div class="both_temp">
               <div class="max_temp">
-                <img src="../images/temperature.png" alt="">
+                <img  src="../images/temperature.png" alt="">
                 <h3>Max : <span id="max">00.00 °C</span></h3>
                 
               </div>

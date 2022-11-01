@@ -1,4 +1,7 @@
+
+console.log(process.env.DOMAIN);
 const weatherForm = document.querySelector("#weatherForm");
+
 weatherForm.addEventListener("submit", async (e) => {
   const input = document.getElementById("input").value;
   e.preventDefault();

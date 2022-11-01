@@ -14,6 +14,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 2vh 2vh;
+ 
 }
 
 .title {
@@ -51,6 +52,11 @@ body {
   /* background-color: lightcoral; */
   gap: 2vmax;
   margin-top: 6vmax;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.cards::-webkit-scrollbar{
+  display: none;
 }
 #search_icon {
   width: 2.6vmax;
@@ -67,7 +73,9 @@ body {
 }
 .info-cards {
   display: flex;
+  width: fit-content;
   gap: 2vmax;
+  overflow-x: auto;
 }
 .dTime {
   display: flex;
@@ -151,6 +159,21 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.icon_desc > #main_icon {
+  margin-left: 1vmax;
+
+}
+.icon_desc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 15vmax;
+  top: 6.5vmax;
+}
+.icon_desc>h5{
+  margin-left: 0.5vmax;
+}
 
 @media screen and (max-width: 600px) {
   .centre {
@@ -197,9 +220,22 @@ body {
   #input {
     width: 60vmax !important;
   }
-  .suggestions_div{
+  .suggestions_div {
     position: absolute;
     top: 4vmax;
     padding: 0.7vmax 0.5vmax;
+  }
+  /* #main_icon{
+    background-color: red;
+    width: 10vh;
+  /* }  */
+  /* not working icon weather in resp to inc size */
+  .icon_desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: -11vmax;
+    top: 19vmax;
   }
 }

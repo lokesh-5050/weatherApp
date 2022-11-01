@@ -30,11 +30,18 @@
           </form>
           <img src="../images/weather-forecast-news-by-news-anchor-removebg-preview.png" id="news_anchor" alt="">
         </div>
-  
+        <div class="icon_desc">
+          <img id="main_icon" src="" alt="">
+          <h5 id="desOfWeather"></h5>
+        </div>
         <!-- weather card -->
         <div class="cards">
-          <div class="temp">
-            <h2 id="City_name">Selected City</h2>
+          <div  class="temp">
+            <div style="display: flex;align-items: center;" class="top_bar">
+              <h2 id="City_name">Selected City </h2>
+             
+            </div>
+
             <div class="dTime" style="display: flex;gap: 1vmax;">
               <h4 id="Date_now" style="white-space: nowrap;">Date</h4>
               <h4 id="Time_now" style="white-space: nowrap;">Time</h4>
@@ -53,8 +60,8 @@
             </div>
           </div>
           
-          <div class="info-cards">
-
+          <div  class="info-cards">
+            
             <div class="card">
               <img src="../images/humidity.png" alt="">
               <h2 id="Rain_value">00.00</h2>
@@ -72,8 +79,30 @@
 
               <h3>Wind Gusts</h3>
             </div>
+
+            <div class="card">
+              <img src="../images/wind.png" alt="">
+              <h2 id="Humidity">00.00</h2>
+
+              <h3 >Humidity</h3>
+            </div>
+
+            <div class="card">
+              <img src="../images/wind.png" alt="">
+              <h2 id="Pressure">00.00</h2>
+
+              <h3 >Pressure</h3>
+            </div>
+
+            <div class="card">
+              <img src="../images/wind.png" alt="">
+              <h2 id="Visibility">00.00</h2>
+
+              <h3 >Visibility</h3>
+            </div>
+
           </div>
-          <p id="Phrase">Aboyt the weaher Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur corrupti voluptate ea omnis non adipisci error! Quae quia minus sint.</p>
+          <p style="position: fixed;" id="Phrase">Aboyt the weaher Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur corrupti voluptate ea omnis non adipisci error! Quae quia minus sint.</p>
           
         </div>
       </div>

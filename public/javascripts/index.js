@@ -13,6 +13,16 @@ weatherForm.addEventListener("submit", async (e) => {
   const weather = await axios.get(
     `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=a1Aa7JCSzw4koBXV0wWHZ76vUDHvQB0n&language=en-us&details=true&metric=true`
   );
+  const Api_Two = await axios.get(
+    `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=325da43176a056d553caf28ca21621dc`
+  );
+  console.log(Api_Two);
+  let Humidity = Api_Two.data.main.humidity;
+  let Pressure = Api_Two.data.main.pressure;
+  let Visibility = Api_Two.data.visibility;
+  let w_icon_string = Api_Two.data.weather[0].icon;
+  let w_icon_des = Api_Two.data.weather[0].main;
+  let icon_src = `https://openweathermap.org/img/wn/${w_icon_string}@4x.png`;
   console.log(weather.data);
   let min_temp = weather.data.DailyForecasts[0].Temperature.Minimum.Value;
   let max_temp = weather.data.DailyForecasts[0].Temperature.Maximum.Value;
@@ -43,10 +53,26 @@ weatherForm.addEventListener("submit", async (e) => {
   Date_now.innerHTML = date;
   let Time_now = document.getElementById("Time_now");
   Time_now.innerHTML = time;
-  let City_name = document.getElementById("City_name");
-  City_name.innerHTML = CityName;
+  let Pressure_now = document.getElementById("Pressure");
+  Pressure_now.innerHTML = Pressure;
+  let Humidity_now = document.getElementById("Humidity");
+  Humidity_now.innerHTML = Humidity;
+  let Visibility_now = document.getElementById("Visibility");
+  Visibility_now.innerHTML = Visibility;
+  let selected_city = document.getElementById("City_name");
+  selected_city.innerHTML = CityName;
+
+
 
   document.getElementById("input").value = "";
+
+  //applying icon
+  let main_icon = document.getElementById("main_icon");
+  main_icon.src = icon_src;
+  main_icon.style.width = "4vmax";
+
+  let desOfWeather = document.getElementById("desOfWeather");
+  desOfWeather.innerHTML = w_icon_des;
 });
 
 //suggestion logic
@@ -6164,7 +6190,6 @@ var search = [
   {
     id: "1223",
     name: "Leh",
-  
   },
   {
     id: "1224",
@@ -6201,15 +6226,16 @@ input_Bar.addEventListener("keydown", (e) => {
         clutterOfSuggestions += `<div style="width: 100%;height: 3vmax;background-color: #fff;" class="sug"><h5 id="suggestion_click" >${city.name}</h5></div>`;
       });
       let suggestions_div = document.querySelector(".suggestions_div");
+      suggestions_div.style.display = "initial";
+
       suggestions_div.innerHTML = clutterOfSuggestions;
       console.log(suggestions);
 
       suggestions_div.addEventListener("click", (e) => {
         let input_Bar = document.getElementById("input");
-
         console.log(e.target.childNodes[0].data);
         input_Bar.value = e.target.childNodes[0].data;
-        suggestions_div.style.display = "none"
+        suggestions_div.style.display = "none";
       });
     } else {
       let suggestions_div = document.querySelector(".suggestions_div");
@@ -6224,10 +6250,10 @@ function searchWeatherIcon() {
   let submit = document.getElementById("submit");
   search_icon.addEventListener("click", (e) => {
     submit.click();
-    suggestions_div.style.display = "none"
+    suggestions_div.style.display = "none";
   });
 }
-searchWeatherIcon()
+searchWeatherIcon();
 
 window.addEventListener("keydown", (e) => {
   console.log(e.key + " e.Key");

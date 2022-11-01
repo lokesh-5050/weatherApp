@@ -8,6 +8,7 @@ weatherForm.addEventListener("submit", async (e) => {
   );
   console.log(cityData.data[0].LocalizedName);
   const locationKey = cityData.data[0].Key;
+  console.log(locationKey);
   let CityName = cityData.data[0].LocalizedName;
   const weather = await axios.get(
     `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=a1Aa7JCSzw4koBXV0wWHZ76vUDHvQB0n&language=en-us&details=true&metric=true`

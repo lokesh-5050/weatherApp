@@ -1,5 +1,4 @@
 
-console.log(process.env.DOMAIN);
 const weatherForm = document.querySelector("#weatherForm");
 
 weatherForm.addEventListener("submit", async (e) => {
@@ -6265,3 +6264,43 @@ window.addEventListener("keydown", (e) => {
     suggestions_div.style.display = "none";
   }
 });
+
+//arrow logic
+var scroll_arrow = document.getElementById("scroll_arrow") 
+var scroll_arrow_left = document.getElementById("scroll_arrow_left")
+var divToScroll = document.querySelector(".cards") 
+scroll_arrow.onclick = () =>{
+  // alert("hey")
+  scroll_arrow.style.zIndex = "99999"
+  scroll_arrow.style.transition = "all cubic-bezier(0.19 , 1 , 0.22 , 1)"
+  divToScroll.scrollLeft += 150;
+  console.log(divToScroll.scrollLeft);
+  if(divToScroll.scrollLeft > 350){
+    scroll_arrow.style.display = "none"
+    scroll_arrow_left.style.display = "initial"
+  }
+}
+
+scroll_arrow_left.onclick = () =>{
+  console.log("hey");
+  scroll_arrow_left.style.zIndex = "99999"
+  divToScroll.scrollLeft -= 150
+  console.log(divToScroll.scrollLeft);
+  if(divToScroll.scrollLeft == 0){
+    scroll_arrow_left.style.display = "none"
+    scroll_arrow.style.display = "initial"
+  }
+}
+
+if(divToScroll.scrollLeft === 332){
+  scroll_arrow_left.style.zIndex = "99999"
+
+
+    scroll_arrow_left.style.display = "initial"
+    scroll_arrow.style.display = "none"
+}
+// scroll_arrow.addEventListener("click" , (e)=>{
+// })
+
+
+//media query js

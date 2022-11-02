@@ -55,6 +55,7 @@ body {
   margin-top: 6vmax;
   overflow-x: auto;
   overflow-y: hidden;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 .cards::-webkit-scrollbar{
   display: none;
@@ -176,6 +177,27 @@ body {
   margin-left: 0.5vmax;
 }
 
+#scroll_arrow{
+  height: 4vh;
+  position: absolute;
+  right: 3%;
+  top: 26.9vmax;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1);
+}
+#scroll_arrow_left{
+  height: 4vh;
+  position: absolute;
+  transform: rotate(180deg);
+  display: none;
+  right: 50vmax;
+  top: 26.9vmax;
+
+  transition: all cubic-bezier(0.19, 1, 0.22, 1);
+}
+.ri-contacts-fill{
+  font-size: 10vmax;
+}
+
 @media screen and (max-width: 600px) {
   .centre {
     display: flex;
@@ -196,7 +218,7 @@ body {
   }
   .info-cards {
     margin-top: 3vmax;
-    margin-left: 4vmax;
+    margin-left: 4.5vmax;
   }
   #Phrase {
     margin-left: 3vmax;
@@ -238,5 +260,17 @@ body {
     position: relative;
     left: -11vmax;
     top: 19vmax;
+  }
+  #scroll_arrow{
+    top: 69.88vmax;
+    right: 5vmax;
+  }
+  #scroll_arrow_left{
+    scroll-behavior: smooth;
+    left: 2.5vmax;
+    top: 69.88vmax;
+  }
+  .title > i{
+    font-size: 3vmax;
   }
 }

@@ -2,6 +2,9 @@
   "name": "weatherapp",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "server": "nodemon"
